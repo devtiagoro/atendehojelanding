@@ -323,8 +323,8 @@ button{ font-family: inherit; cursor: pointer; }
 
 /* Hero visual — signature flow */
 .hero-visual{
-  position: relative;
-  min-height: 420px;
+  display: flex;
+  flex-direction: column;
 }
 
 .flow-card{
@@ -335,8 +335,8 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 .flow-chat{
-  position: absolute;
-  top: 0; left: 0;
+  position: relative;
+  align-self: flex-start;
   width: 100%;
   max-width: 300px;
   padding: 18px;
@@ -391,11 +391,12 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 .flow-agenda{
-  position: absolute;
-  bottom: 0; right: 0;
+  position: relative;
+  align-self: flex-end;
   width: 100%;
   max-width: 280px;
   padding: 20px;
+  margin-top: -22px;
   background: var(--brand-dark);
   color: var(--white);
   z-index: 2;
@@ -976,22 +977,7 @@ button{ font-family: inherit; cursor: pointer; }
    ============================================ */
 @media (max-width: 1024px){
   .hero-grid{ grid-template-columns: 1fr; }
-
-  /* Cartões do hero passam a empilhar em vez de sobrepor em tablet/mobile */
-  .hero-visual{
-    min-height: 0;
-    max-width: 420px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  .flow-chat,
-  .flow-agenda{
-    position: static;
-    width: 100%;
-    max-width: 100%;
-  }
+  .hero-visual{ max-width: 420px; margin: 0 auto; }
 
   .journey{ grid-template-columns: 1fr 1fr; }
   .journey-arrow{ display: none; }
@@ -1037,21 +1023,6 @@ button{ font-family: inherit; cursor: pointer; }
     color: var(--accent-2);
     font-weight: 700;
     border-bottom: none;
-  }
-
-  /* Cartões do hero passam a empilhar em vez de sobrepor no mobile/tablet */
-  .hero-visual{
-    min-height: 0;
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-  .flow-chat,
-  .flow-agenda{
-    position: static;
-    width: 100%;
-    max-width: 100%;
   }
 
   .grid-3{ grid-template-columns: 1fr; }
