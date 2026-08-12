@@ -94,10 +94,59 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxClose = document.getElementById('lightboxClose');
   const deviceFrames = document.querySelectorAll('.device-frame');
 
+  /* Zoom e pan da imagem dentro do lightbox, isolado do zoom da página */
+  const MIN_SCALE = 1;
+  const MAX_SCALE = 5;
+  let scale = 1;
+  let posX = 0;
+  let posY = 0;
+  let isPanning = false;
+  let hasDragged = false;
+  let startX = 0;
+  let startY = 0;
+  let startPosX = 0;
+  let startPosY = 0;
+  let pinchStartDist = 0;
+  let pinchStartScale = 1;
+
+  const applyTransform = (animated) => {
+    if (!lightboxImg) return;
+    lightboxImg.style.transition = animated ? 'transform 0.2s ease-out' : 'none';
+    lightboxImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+    lightboxImg.classList.toggle('zoomed', scale > 1);
+  };
+
+  const resetZoom = (animated) => {
+    scale = 1;
+    posX = 0;
+    posY = 0;
+    applyTransform(animated);
+  };
+
+  const zoomAt = (newScale, clientX, clientY) => {
+    if (!lightboxImg) return;
+    const clamped = Math.min(MAX_SCALE, Math.max(MIN_SCALE, newScale));
+    if (clamped === scale) return;
+
+    const rect = lightboxImg.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2 - posX;
+    const centerY = rect.top + rect.height / 2 - posY;
+    const originX = clientX - centerX;
+    const originY = clientY - centerY;
+    const ratio = clamped / scale;
+
+    posX = posX * ratio + originX * (1 - ratio);
+    posY = posY * ratio + originY * (1 - ratio);
+    scale = clamped;
+    if (scale === MIN_SCALE) { posX = 0; posY = 0; }
+    applyTransform(false);
+  };
+
   const openLightbox = (src, alt) => {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = src;
     lightboxImg.alt = alt || '';
+    resetZoom(false);
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -108,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    resetZoom(false);
   };
 
   deviceFrames.forEach(frame => {
@@ -126,12 +176,99 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightbox) {
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
+      if (e.target === lightbox && !hasDragged) closeLightbox();
     });
   }
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeLightbox();
   });
+
+  if (lightboxImg) {
+    lightboxImg.setAttribute('draggable', 'false');
+    lightboxImg.addEventListener('dragstart', (e) => e.preventDefault());
+
+    /* Roda do mouse / trackpad: amplia a imagem no ponto do cursor, nunca a página */
+    lightboxImg.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const factor = Math.exp(-e.deltaY * 0.0016);
+      zoomAt(scale * factor, e.clientX, e.clientY);
+    }, { passive: false });
+
+    /* Duplo clique: alterna entre 1x e 2.5x no ponto clicado */
+    lightboxImg.addEventListener('dblclick', (e) => {
+      if (scale > 1) {
+        resetZoom(true);
+      } else {
+        zoomAt(2.5, e.clientX, e.clientY);
+        applyTransform(true);
+      }
+    });
+
+    /* Arrastar com o mouse quando ampliada */
+    lightboxImg.addEventListener('mousedown', (e) => {
+      if (scale <= 1) return;
+      isPanning = true;
+      hasDragged = false;
+      startX = e.clientX;
+      startY = e.clientY;
+      startPosX = posX;
+      startPosY = posY;
+      lightboxImg.classList.add('dragging');
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+      if (Math.abs(dx) > 3 || Math.abs(dy) > 3) hasDragged = true;
+      posX = startPosX + dx;
+      posY = startPosY + dy;
+      applyTransform(false);
+    });
+    window.addEventListener('mouseup', () => {
+      if (!isPanning) return;
+      isPanning = false;
+      lightboxImg.classList.remove('dragging');
+      setTimeout(() => { hasDragged = false; }, 0);
+    });
+
+    /* Toque: pinça para ampliar, um dedo para arrastar quando ampliada */
+    lightboxImg.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        const [t1, t2] = e.touches;
+        pinchStartDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        pinchStartScale = scale;
+      } else if (e.touches.length === 1 && scale > 1) {
+        isPanning = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        startPosX = posX;
+        startPosY = posY;
+      }
+    }, { passive: true });
+
+    lightboxImg.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const [t1, t2] = e.touches;
+        const dist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        const midX = (t1.clientX + t2.clientX) / 2;
+        const midY = (t1.clientY + t2.clientY) / 2;
+        const newScale = pinchStartScale * (dist / pinchStartDist);
+        zoomAt(newScale, midX, midY);
+      } else if (e.touches.length === 1 && isPanning) {
+        e.preventDefault();
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+        posX = startPosX + dx;
+        posY = startPosY + dy;
+        applyTransform(false);
+      }
+    }, { passive: false });
+
+    lightboxImg.addEventListener('touchend', () => {
+      isPanning = false;
+    });
+  }
 
   /* Reanima o fluxo de mensagens do hero periodicamente */
   const bubbleStream = document.getElementById('bubbleStream');
