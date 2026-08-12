@@ -31,6 +31,7 @@
       <a href="#para-quem">Para quem é</a>
       <a href="#planos">Planos</a>
       <a href="#faq">FAQ</a>
+      <a href="https://app.atendehoje.com.br" class="nav-entrar" target="_blank" rel="noopener">Entrar</a>
     </nav>
 
     <div class="header-actions">
@@ -275,13 +276,19 @@
           </ul>
         </div>
         <div class="showcase-frames">
-          <div class="device-frame device-frame-front">
+          <div class="device-frame device-frame-front" role="button" tabindex="0" aria-label="Ampliar imagem do painel de agendamentos">
             <div class="device-bar"><span></span><span></span><span></span></div>
             <img src="assets/screenshot-agenda.png" alt="Painel de agendamentos do AtendeHoje mostrando o calendário do mês com horários marcados">
+            <span class="device-frame-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
           </div>
-          <div class="device-frame device-frame-back">
+          <div class="device-frame device-frame-back" role="button" tabindex="0" aria-label="Ampliar imagem do dashboard">
             <div class="device-bar"><span></span><span></span><span></span></div>
             <img src="assets/screenshot-dashboard.png" alt="Dashboard do AtendeHoje com resumo dos próximos atendimentos e faturamento previsto do dia">
+            <span class="device-frame-hint" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
           </div>
         </div>
       </div>
@@ -541,6 +548,11 @@
 <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Estou%20vendo%20o%20site%20da%20AtendeHoje%20e%20tenho%20uma%20d%C3%BAvida%20r%C3%A1pida." class="whatsapp-fab" aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6A11.9 11.9 0 0 0 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="currentColor"/><path d="M11.6 10.6c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6.3.7.9 2.3.9 2.5.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.4.4-.2.7.3.4 1.1 1.7 2.4 2.8 1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.3.5-.3.8-.2.3.1 2.1 1 2.4 1.2.3.1.5.2.6.3.1.2.1 1-.3 1.9-.4.9-2 1.7-2.8 1.8-.7.1-1.6.2-5.2-1.1-4.4-1.7-7.2-6.2-7.4-6.5-.2-.3-1.8-2.4-1.8-4.5 0-2.2 1.1-3.2 1.5-3.7Z" fill="var(--brand-dark)"/></svg>
 </a>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem ampliada">&times;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
 
 <script src="script.js"></script>
 </body>

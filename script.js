@@ -88,6 +88,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* Lightbox das imagens do produto (clique para ampliar) */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const deviceFrames = document.querySelectorAll('.device-frame');
+
+  const openLightbox = (src, alt) => {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  deviceFrames.forEach(frame => {
+    const img = frame.querySelector('img');
+    if (!img) return;
+
+    frame.addEventListener('click', () => openLightbox(img.src, img.alt));
+    frame.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(img.src, img.alt);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
   /* Reanima o fluxo de mensagens do hero periodicamente */
   const bubbleStream = document.getElementById('bubbleStream');
   const flowAgenda = document.querySelector('.flow-agenda');
