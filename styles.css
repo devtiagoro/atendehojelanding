@@ -755,6 +755,8 @@ button{ font-family: inherit; cursor: pointer; }
 }
 .price-value span{ font-size: 0.9rem; font-weight: 500; color: var(--ink-faint); }
 .price-value-custom{ font-size: 1.3rem; }
+.price-note{ font-size: 0.84rem; font-weight: 600; color: var(--ink-soft); margin: -14px 0 4px; }
+.price-note-faint{ font-weight: 400; font-size: 0.8rem; color: var(--ink-faint); margin-bottom: 22px; }
 .price-list{ flex: 1; margin-bottom: 28px; }
 .price-list li{
   font-size: 0.88rem;
