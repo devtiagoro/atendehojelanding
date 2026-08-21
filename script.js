@@ -24,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.getElementById('navToggle');
   const mainNav = document.getElementById('mainNav');
 
+  const closeMobileNav = () => {
+    if (!navToggle || !mainNav) return;
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('open');
@@ -31,10 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMobileNav);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+        closeMobileNav();
+        navToggle.focus();
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mainNav.classList.contains('open')) return;
+      if (mainNav.contains(e.target) || navToggle.contains(e.target)) return;
+      closeMobileNav();
     });
   }
 
@@ -92,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxClose = document.getElementById('lightboxClose');
-  const deviceFrames = document.querySelectorAll('.device-frame');
+  const shotFrames = document.querySelectorAll('.shot-frame');
 
   /* Zoom e pan da imagem dentro do lightbox, isolado do zoom da página */
   const MIN_SCALE = 1;
@@ -160,15 +176,20 @@ document.addEventListener('DOMContentLoaded', () => {
     resetZoom(false);
   };
 
-  deviceFrames.forEach(frame => {
+  shotFrames.forEach(frame => {
     const img = frame.querySelector('img');
     if (!img) return;
 
-    frame.addEventListener('click', () => openLightbox(img.src, img.alt));
+    const tryOpen = () => {
+      if (frame.classList.contains('shot-missing')) return;
+      openLightbox(img.src, img.alt);
+    };
+
+    frame.addEventListener('click', tryOpen);
     frame.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openLightbox(img.src, img.alt);
+        tryOpen();
       }
     });
   });
@@ -268,22 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.addEventListener('touchend', () => {
       isPanning = false;
     });
-  }
-
-  /* Reanima o fluxo de mensagens do hero periodicamente */
-  const bubbleStream = document.getElementById('bubbleStream');
-  const flowAgenda = document.querySelector('.flow-agenda');
-  if (bubbleStream && flowAgenda) {
-    setInterval(() => {
-      bubbleStream.querySelectorAll('.bubble').forEach(b => {
-        b.style.animation = 'none';
-        void b.offsetWidth; /* reinicia a animação */
-        b.style.animation = '';
-      });
-      flowAgenda.style.animation = 'none';
-      void flowAgenda.offsetWidth;
-      flowAgenda.style.animation = '';
-    }, 7000);
   }
 
 });
