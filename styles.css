@@ -367,19 +367,42 @@ button{ font-family: inherit; cursor: pointer; }
 .hero-shots{
   position: relative;
   width: 100%;
-  min-height: 380px;
+  min-height: 460px;
 }
 .hero-shots .shot-frame-back{
   position: absolute;
   top: 0; left: 0;
-  width: 76%;
-  opacity: 0.92;
+  width: 46%;
+  opacity: 0.5;
+  z-index: 1;
+}
+.hero-shots .shot-frame-mid1{
+  position: absolute;
+  top: 8%; left: 18%;
+  width: 52%;
+  opacity: 0.62;
+  z-index: 2;
+}
+.hero-shots .shot-frame-mid2{
+  position: absolute;
+  top: 20%; left: 4%;
+  width: 58%;
+  opacity: 0.76;
+  z-index: 3;
+}
+.hero-shots .shot-frame-mid3{
+  position: absolute;
+  bottom: 14%; left: 22%;
+  width: 66%;
+  opacity: 0.9;
+  z-index: 4;
 }
 .hero-shots .shot-frame-front{
   position: absolute;
   bottom: 0; right: 0;
   width: 76%;
-  z-index: 2;
+  opacity: 1;
+  z-index: 5;
 }
 
 /* ============================================
@@ -490,6 +513,7 @@ button{ font-family: inherit; cursor: pointer; }
    ============================================ */
 .shot-frame{
   position: relative;
+  margin: 0;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -943,18 +967,18 @@ button{ font-family: inherit; cursor: pointer; }
   .redes-grid{ grid-template-columns: 1fr; gap: 24px; }
   .redes-cta{ justify-content: flex-start; }
 
-  /* Overlapping hero shots become side-by-side, tap to zoom */
+  /* Overlapping hero shots become a wrapped grid, tap to zoom */
   .hero-shots{
     position: static;
     min-height: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
   }
-  .hero-shots .shot-frame-back,
-  .hero-shots .shot-frame-front{
+  .hero-shots .shot-frame{
     position: relative;
     top: auto; left: auto; right: auto; bottom: auto;
-    width: 50%;
+    width: calc(50% - 12px);
     opacity: 1;
   }
 }
@@ -999,8 +1023,7 @@ button{ font-family: inherit; cursor: pointer; }
   .hero-cta{ flex-direction: column; align-items: stretch; }
   .hero-checks{ gap: 14px 18px; }
   .hero-shots{ flex-direction: column; }
-  .hero-shots .shot-frame-back,
-  .hero-shots .shot-frame-front{ width: 100%; }
+  .hero-shots .shot-frame{ width: 100%; }
   .cta-final-buttons{ flex-direction: column; align-items: stretch; }
   .partners-banner{ padding: 32px 24px; }
   .partners-list{ flex-direction: column; align-items: flex-start; gap: 10px; }
