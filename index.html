@@ -2,650 +2,505 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AtendeHoje | Seu parceiro operacional para negócios de atendimento</title>
-<meta name="description" content="Organize agenda, clientes, equipe e oportunidades com o AtendeHoje. Uma plataforma criada para transformar atendimento em uma operação mais organizada e previsível.">
-<meta property="og:title" content="AtendeHoje | Seu parceiro operacional para negócios de atendimento">
-<meta property="og:description" content="Agenda, clientes, equipe, acompanhamento e oportunidades em um só lugar para transformar atendimento em uma operação organizada e previsível.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>AtendeHoje | Agenda, clientes e retorno para negócios de atendimento</title>
+<meta name="description" content="Sua agenda mostra quem vai vir. O AtendeHoje mostra quem deveria voltar. Agenda, clientes, relacionamento e caixa em um só lugar para salões, clínicas de estética, barbearias e studios.">
+<meta name="theme-color" content="#042A2B">
+<meta property="og:title" content="AtendeHoje | Sua agenda mostra quem vai vir. O AtendeHoje mostra quem deveria voltar.">
+<meta property="og:description" content="Agenda, clientes, relacionamento e caixa em uma só operação para negócios que atendem com horário marcado.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="AtendeHoje">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AtendeHoje | Agenda, clientes e retorno para negócios de atendimento">
+<meta name="twitter:description" content="Sua agenda mostra quem vai vir. O AtendeHoje mostra quem deveria voltar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="assets/logo-atende-hoje.png">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<a href="#top" class="skip-link">Pular para o conteúdo</a>
-
-<div class="progress-bar" id="progressBar"></div>
+<a href="#conteudo" class="lp-skip">Pular para o conteúdo</a>
 
 <!-- ===== HEADER ===== -->
-<header class="site-header" id="siteHeader">
-  <div class="wrap header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <img src="assets/logo-atende-hoje.png" alt="" width="32" height="32">
-      </span>
-      <span class="logo-text">Atende<strong>Hoje</strong></span>
+<header class="lp-header" id="siteHeader">
+  <div class="lp-container lp-header-inner">
+    <a href="#top" class="lp-logo" aria-label="AtendeHoje — início">
+      <img src="assets/logo-atende-hoje.png" alt="" width="32" height="32">
+      <span>Atende<strong>Hoje</strong></span>
     </a>
 
-    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-      <a href="#solucoes">Produto</a>
+    <nav class="lp-nav" id="mainNav" aria-label="Navegação principal">
       <a href="#como-funciona">Como funciona</a>
-      <a href="#para-quem">Para quem</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#para-quem">Para quem é</a>
       <a href="#planos">Planos</a>
-      <a href="#faq">FAQ</a>
-      <a href="https://app.atendehoje.com.br" class="nav-entrar" target="_blank" rel="noopener">Entrar</a>
+      <a href="https://app.atendehoje.com.br" class="lp-nav-login" target="_blank" rel="noopener">Entrar</a>
     </nav>
 
-    <div class="header-actions">
-      <a href="https://app.atendehoje.com.br" class="btn btn-ghost" target="_blank" rel="noopener">Entrar</a>
-      <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20AtendeHoje%20e%20quero%20conhecer%20a%20plataforma." class="btn btn-primary btn-sm" target="_blank" rel="noopener">Conhecer o AtendeHoje</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+    <div class="lp-header-actions">
+      <a href="https://app.atendehoje.com.br" class="lp-btn lp-btn-ghost lp-header-login" target="_blank" rel="noopener">Entrar</a>
+      <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20AtendeHoje%20e%20quero%20conhecer%20a%20plataforma." class="lp-btn lp-btn-primary lp-btn-sm" target="_blank" rel="noopener" data-cta="header"><span class="lp-hide-xs">Conhecer o AtendeHoje</span><span class="lp-show-xs">Conhecer</span></a>
+      <button type="button" class="lp-nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="conteudo">
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Seu parceiro operacional</p>
-        <h1>Você atende. <span class="hl">O AtendeHoje cuida da operação ao redor.</span></h1>
-        <p class="hero-lead">Agenda, clientes, equipe, acompanhamento e oportunidades em um só lugar para transformar atendimento em uma operação organizada e previsível.</p>
+  <!-- ===== 1. HERO ===== -->
+  <section class="lp-hero" id="top" aria-labelledby="hero-title">
+    <div class="lp-container lp-hero-grid">
+      <div class="lp-hero-copy">
+        <p class="lp-eyebrow">Para salões, clínicas e negócios de atendimento</p>
+        <h1 id="hero-title">
+          <span class="lp-h1-a">Sua agenda mostra quem vai vir.</span>
+          <span class="lp-h1-b">O AtendeHoje mostra quem <span class="lp-mark">deveria voltar.</span></span>
+        </h1>
+        <p class="lp-hero-lead">Agenda, clientes e caixa organizados num só lugar — e o histórico de cada cliente trabalhando para mostrar quem está no momento de voltar, antes que essa oportunidade se perca.</p>
 
-        <div class="hero-cta">
-          <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20AtendeHoje%20e%20organizar%20a%20opera%C3%A7%C3%A3o%20do%20meu%20neg%C3%B3cio." class="btn btn-primary btn-lg" target="_blank" rel="noopener">Conhecer o AtendeHoje</a>
-          <a href="#como-funciona" class="btn btn-outline btn-lg">Ver como funciona</a>
+        <div class="lp-hero-cta">
+          <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20AtendeHoje%20e%20organizar%20a%20opera%C3%A7%C3%A3o%20do%20meu%20neg%C3%B3cio." class="lp-btn lp-btn-primary lp-btn-lg" target="_blank" rel="noopener" data-cta="hero-primary">Quero conhecer o AtendeHoje</a>
+          <a href="#como-funciona" class="lp-btn lp-btn-outline lp-btn-lg" data-cta="hero-secondary">Ver como funciona</a>
         </div>
 
-        <ul class="hero-checks">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Organize sua operação</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompanhe seus clientes</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Descubra novas oportunidades</li>
-        </ul>
+        <p class="lp-microproof" aria-label="O que o AtendeHoje reúne">
+          <span>Agenda</span><span>Clientes</span><span>Retorno</span><span>Caixa</span>
+        </p>
       </div>
 
-      <div class="hero-visual">
-        <div class="hero-shots">
-          <figure class="shot-frame shot-frame-back" role="button" tabindex="0" aria-label="Ampliar imagem da agenda do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/agendamentos.png" alt="Agenda do AtendeHoje mostrando o calendário do mês com horários organizados por profissional" loading="eager" width="1920" height="1109" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
-          <figure class="shot-frame shot-frame-mid1" role="button" tabindex="0" aria-label="Ampliar imagem da carteira de clientes do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/caixa.png" alt="Módululo de Caixa do AtendeHoje com resumo da carteira e informações para tomada de decisão" loading="eager" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
-          <figure class="shot-frame shot-frame-mid2" role="button" tabindex="0" aria-label="Ampliar imagem do módulo de relacionamento do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/relacionamento.png" alt="Módulo de Relacionamento do AtendeHoje com oportunidades de contato e mensagens sugeridas" loading="eager" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
-          <figure class="shot-frame shot-frame-mid3" role="button" tabindex="0" aria-label="Ampliar imagem do Copiloto do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/copiloto.png" alt="Copiloto do AtendeHoje mostrando capacidade comercial, ocupação e oportunidades do dia" loading="eager" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
-          <figure class="shot-frame shot-frame-front" role="button" tabindex="0" aria-label="Ampliar imagem do dashboard do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/dashboard.png" alt="Dashboard do AtendeHoje com resumo do dia, atendimentos e faturamento previsto" loading="eager" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROBLEMA ===== -->
-  <section class="section" id="problema">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Seu cliente quer atendimento. O problema é tudo que acontece ao redor dele.</h2>
-        <p>O cliente chama pelo WhatsApp, alguém responde, é preciso achar horário, ver profissional, confirmar, registrar, lembrar, atender e acompanhar. Quando essas etapas ficam espalhadas entre WhatsApp, caderno, memória e planilhas, oportunidades começam a escapar.</p>
-      </div>
-
-      <div class="grid-3 reveal">
-        <article class="problem-card">
-          <span class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="17" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M7.6 8.2L11 15.4M16.6 7.2L13 15.6" stroke="currentColor" stroke-width="1.4" stroke-dasharray="1 3.2" stroke-linecap="round"/></svg>
-          </span>
-          <h3>Agenda espalhada</h3>
-          <p>Informações em diferentes lugares tornam a rotina difícil de acompanhar e fáceis de perder.</p>
-        </article>
-        <article class="problem-card">
-          <span class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c0-3.6 3.1-6.4 7-6.4s7 2.8 7 6.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="1 3"/></svg>
-          </span>
-          <h3>Cliente esquecido</h3>
-          <p>O atendimento termina, mas ninguém acompanha o próximo passo daquele cliente.</p>
-        </article>
-        <article class="problem-card">
-          <span class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 9.5h16" stroke="currentColor" stroke-width="1.6"/><path d="M8 13.5h2M8 16.5h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/></svg>
-          </span>
-          <h3>Capacidade desperdiçada</h3>
-          <p>Horários ficam disponíveis sem que a empresa perceba o potencial daquele espaço.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SOLUÇÃO / PILARES ===== -->
-  <section class="section section-alt" id="solucoes">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>É aí que o AtendeHoje entra.</h2>
-        <p>Nós conectamos as etapas da sua operação para que atendimento, agenda, clientes e oportunidades funcionem como uma única jornada.</p>
-      </div>
-
-      <div class="pillars reveal">
-        <article class="pillar">
-          <span class="pillar-num">01</span>
-          <h3>Atendimento</h3>
-          <p>Centralize o que acontece antes e depois do agendamento.</p>
-        </article>
-        <article class="pillar">
-          <span class="pillar-num">02</span>
-          <h3>Agenda</h3>
-          <p>Saiba quem atende, quando atende e onde existe disponibilidade.</p>
-        </article>
-        <article class="pillar">
-          <span class="pillar-num">03</span>
-          <h3>Clientes</h3>
-          <p>Mantenha histórico, relacionamento e informações organizadas.</p>
-        </article>
-        <article class="pillar pillar-active">
-          <span class="pillar-num">04</span>
-          <h3>Oportunidades</h3>
-          <p>Enxergue capacidade disponível e oportunidades que normalmente passariam despercebidas.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AGENDA ===== -->
-  <section class="section split" id="agenda">
-    <div class="wrap split-grid">
-      <div class="split-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Agenda</p>
-        <h2>Veja sua operação acontecendo.</h2>
-        <p class="split-lead">Dia, semana ou mês. Profissionais, clientes, serviços e horários organizados para que sua equipe saiba exatamente o que acontece na rotina.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Visão diária, semanal e mensal</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Serviços e profissionais organizados</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Status do atendimento visíveis rapidamente</li>
-        </ul>
-      </div>
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg" role="button" tabindex="0" aria-label="Ampliar imagem da agenda do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/agendamentos.png" alt="Calendário mensal de agendamentos do AtendeHoje com horários, serviços e status de cada atendimento" loading="lazy" decoding="async" width="1920" height="1109" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
+      <div class="lp-hero-visual">
+        <button type="button" class="lp-shot lp-hero-main" data-full="assets/landing/agendamentos.png" aria-label="Ampliar imagem da agenda do AtendeHoje">
+          <picture>
+            <source media="(max-width: 639px)" srcset="assets/landing/web/agenda-m.webp" width="900" height="490">
+            <img src="assets/landing/web/agenda-960.webp" srcset="assets/landing/web/agenda-960.webp 960w, assets/landing/web/agenda-1600.webp 1600w" sizes="(min-width: 1024px) 640px, 92vw" width="1600" height="1103" alt="Agenda mensal do AtendeHoje com os atendimentos de cada dia, serviço e status" fetchpriority="high">
+          </picture>
+        </button>
+        <figure class="lp-hero-detail">
+          <figcaption><span class="lp-dot" aria-hidden="true"></span>Quem deveria voltar</figcaption>
+          <img src="assets/landing/web/retorno.webp" width="468" height="296" alt="Painel Clientes sem retorno do AtendeHoje, separando clientes por tempo desde o último atendimento: 0 a 30, 31 a 45, 46 a 90 e mais de 90 dias" decoding="async">
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ===== CLIENTES ===== -->
-  <section class="section split split-reverse section-alt" id="clientes">
-    <div class="wrap split-grid">
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg" role="button" tabindex="0" aria-label="Ampliar imagem da carteira de clientes do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/clientes.png" alt="Painel de clientes do AtendeHoje com resumo da carteira, perfil de clientes e serviços mais consumidos" loading="lazy" decoding="async" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
-        </figure>
-      </div>
-      <div class="split-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Clientes</p>
-        <h2>Sua base de clientes também conta uma história.</h2>
-        <p class="split-lead">Saiba quem está chegando, quem retorna, quem está se afastando e quais serviços fazem parte da relação de cada cliente com o seu negócio.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Cadastro centralizado</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Histórico de atendimentos e serviços consumidos</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Perfil da carteira: novos, recorrentes e em risco</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <!-- ===== 2. POR QUÊ ===== -->
+  <section class="lp-section" id="por-que" aria-labelledby="porque-title">
+    <div class="lp-container lp-why-grid">
+      <div class="lp-why-copy reveal">
+        <p class="lp-kicker">Por quê</p>
+        <h2 id="porque-title">O problema não é só organizar quem vai vir.</h2>
+        <p class="lp-section-lead">É perceber quem deveria ter voltado — e desapareceu da sua rotina sem ninguém notar.</p>
 
-  <div class="narrative-link reveal" aria-hidden="true">
-    <span>Primeiro, organize sua base.</span>
-    <span class="narrative-arrow">↓</span>
-    <span>Depois, use essas informações para manter o relacionamento acontecendo.</span>
-  </div>
-
-  <!-- ===== RELACIONAMENTO ===== -->
-  <section class="section split" id="relacionamento">
-    <div class="wrap split-grid">
-      <div class="split-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Relacionamento</p>
-        <h2>Seu atendimento não termina quando o cliente vai embora.</h2>
-        <p class="split-lead">O AtendeHoje acompanha momentos importantes da sua carteira — próximos atendimentos, aniversariantes e clientes em momento de retorno — e sugere mensagens prontas para sua equipe usar.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Próximos atendimentos e aniversariantes organizados</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Clientes em momento de retorno identificados</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Mensagens sugeridas, prontas para copiar e enviar</li>
-        </ul>
-        <p class="split-note">Mensagens sugeridas para uso manual da sua equipe — o AtendeHoje ainda não envia mensagens automaticamente.</p>
-      </div>
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg" role="button" tabindex="0" aria-label="Ampliar imagem do módulo de relacionamento do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/relacionamento.png" alt="Módulo de Relacionamento do AtendeHoje com oportunidades de contato e mensagens sugeridas para clientes" loading="lazy" decoding="async" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AGENDAMENTO ONLINE ===== -->
-  <section class="section split split-reverse section-alt" id="agendamento-online">
-    <div class="wrap split-grid">
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg" role="button" tabindex="0" aria-label="Ampliar imagem do painel de link público do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/link-publico.png" alt="Painel de administração do link público de agendamento do AtendeHoje, com QR Code e desempenho de acessos" loading="lazy" decoding="async" width="1920" height="1109" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
-        </figure>
-        <p class="shot-caption">Painel de administração do link público.</p>
-      </div>
-      <div class="split-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Agendamento online</p>
-        <h2>Transforme interesse em horário marcado.</h2>
-        <p class="split-lead">Compartilhe seu link por WhatsApp, Instagram, QR Code ou onde seus clientes já estão e acompanhe visualizações, acessos e conversão em um só painel.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Link próprio de agendamento</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>QR Code pronto para compartilhar</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Acompanhamento de visualizações e conversão</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== COPILOTO ===== -->
-  <section class="section section-dark" id="copiloto">
-    <div class="wrap split-grid">
-      <div class="split-copy reveal">
-        <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span>Copiloto AtendeHoje</p>
-        <h2>Onde você está deixando dinheiro na mesa hoje?</h2>
-        <p class="split-lead split-lead-dark">O Copiloto cruza capacidade, agenda e informações da operação para mostrar onde existem oportunidades no dia.</p>
-        <p class="split-lead split-lead-dark">Não basta saber que sua agenda tem espaços. O AtendeHoje ajuda você a enxergar o que esses espaços representam para sua operação.</p>
-        <ul class="stat-chips">
-          <li>Capacidade comercial disponível</li>
-          <li>Ocupação da agenda</li>
-          <li>Faturamento agendado</li>
-          <li>Oportunidades abertas</li>
-        </ul>
-      </div>
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg" role="button" tabindex="0" aria-label="Ampliar imagem do Copiloto do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/copiloto.png" alt="Copiloto do AtendeHoje mostrando capacidade comercial, ocupação, faturamento agendado e oportunidades do dia" loading="lazy" decoding="async" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== DASHBOARD / VISIBILIDADE ===== -->
-  <section class="section split" id="visibilidade">
-    <div class="wrap split-grid">
-      <div class="split-copy reveal">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Visão da operação</p>
-        <h2>Você não deveria precisar perguntar como foi o dia.</h2>
-        <p class="split-lead">Veja agenda, atendimentos, faturamento previsto e os principais movimentos da operação em uma leitura rápida.</p>
-        <ul class="check-list">
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Resumo do dia e próximo atendimento</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Faturamento previsto do dia e do mês</li>
-          <li><svg viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Serviços mais agendados</li>
-        </ul>
-      </div>
-      <div class="split-media reveal">
-        <figure class="shot-frame shot-lg shot-focus-top" role="button" tabindex="0" aria-label="Ampliar imagem do dashboard do AtendeHoje">
-          <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-          <img src="assets/landing/dashboard.png" alt="Dashboard do AtendeHoje com atendimentos do dia, resumo e faturamento previsto" loading="lazy" decoding="async" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-          <span class="shot-fallback">Screenshot em breve</span>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ESTRUTURA OPERACIONAL ===== -->
-  <section class="section section-alt" id="estrutura">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Uma operação conectada ao redor do atendimento.</h2>
-        <p>Serviços, profissionais, produtos e caixa organizados para dar suporte à agenda, sem virar um sistema complicado.</p>
-      </div>
-
-      <div class="estrutura-grid reveal">
-        <ul class="estrutura-list">
+        <ol class="lp-pains">
           <li>
-            <h3>Serviços</h3>
-            <p>O que sua empresa oferece, com duração, preço e cor de identificação.</p>
+            <span class="lp-pain-num">01</span>
+            <div>
+              <h3>A cliente é atendida.</h3>
+              <p>Ela sai satisfeita, mas nenhum próximo passo fica definido.</p>
+            </div>
           </li>
           <li>
-            <h3>Profissionais</h3>
-            <p>Quem realiza cada atendimento e como a agenda se organiza por pessoa.</p>
+            <span class="lp-pain-num">02</span>
+            <div>
+              <h3>As semanas passam.</h3>
+              <p>No meio da correria, ninguém percebe que ela já deveria ter voltado.</p>
+            </div>
           </li>
           <li>
-            <h3>Produtos</h3>
-            <p>O que também faz parte do atendimento, com estoque e preço.</p>
+            <span class="lp-pain-num">03</span>
+            <div>
+              <h3>Outro lugar aparece.</h3>
+              <p>A cliente que você já conquistou muda de rotina — e você nem soube.</p>
+            </div>
           </li>
-          <li>
-            <h3>Caixa</h3>
-            <p>O que aconteceu financeiramente depois que o atendimento foi concluído.</p>
+        </ol>
+      </div>
+
+      <aside class="lp-story reveal" aria-labelledby="story-title">
+        <p class="lp-story-tag" id="story-title">Uma história comum</p>
+        <p class="lp-story-intro">Uma cliente faz o mesmo procedimento a cada 30 dias.</p>
+        <ol class="lp-timeline">
+          <li class="is-done"><strong>Agosto</strong><span>Atendida. Tudo certo.</span></li>
+          <li class="is-miss"><strong>Setembro</strong><span>Deveria voltar. Nenhum agendamento.</span></li>
+          <li class="is-miss"><strong>Outubro</strong><span>Ninguém percebeu.</span></li>
+        </ol>
+        <p class="lp-story-body">Talvez ela não tenha deixado de gostar do seu trabalho. Ela simplesmente não marcou de novo.</p>
+        <p class="lp-story-punch">E uma agenda tradicional não avisa que alguém deveria ter voltado.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===== 3. COMO ===== -->
+  <section class="lp-section lp-surface-soft" id="como-funciona" aria-labelledby="como-title">
+    <div class="lp-container">
+      <div class="lp-head reveal">
+        <p class="lp-kicker">Como funciona</p>
+        <h2 id="como-title">Como o AtendeHoje entra na sua operação</h2>
+        <p class="lp-section-lead">Não é mais uma agenda. É a rotina inteira ao redor do atendimento, conectada — do primeiro contato à próxima visita.</p>
+      </div>
+
+      <div class="lp-how-grid">
+        <ol class="lp-steps reveal">
+          <li class="lp-step">
+            <span class="lp-step-num">1</span>
+            <div>
+              <h3>Organiza a operação</h3>
+              <p>Agenda, equipe, serviços e atendimentos num fluxo claro. Todo mundo enxerga o mesmo dia.</p>
+            </div>
           </li>
-        </ul>
-        <div class="mini-shots">
-          <figure class="shot-frame shot-sm" role="button" tabindex="0" aria-label="Ampliar imagem do caixa do AtendeHoje">
-            <span class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></span>
-            <img src="assets/landing/caixa.png" alt="Caixa do AtendeHoje com lotes por data e histórico de formas de pagamento" loading="lazy" decoding="async" width="1920" height="1517" onerror="this.closest('.shot-frame').classList.add('shot-missing')">
-            <span class="shot-fallback">Screenshot em breve</span>
-          </figure>
+          <li class="lp-step">
+            <span class="lp-step-num">2</span>
+            <div>
+              <h3>Acompanha o que acontece depois</h3>
+              <p>Com o histórico de cada cliente, o AtendeHoje identifica quem está no momento de voltar, quem está se afastando e quem faz aniversário.</p>
+            </div>
+          </li>
+          <li class="lp-step">
+            <span class="lp-step-num">3</span>
+            <div>
+              <h3>Transforma atendimento em gestão</h3>
+              <p>Confirmação, relacionamento e caixa passam a fazer parte da mesma operação — sem planilha paralela.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="lp-cycle reveal" aria-labelledby="cycle-title">
+          <p class="lp-cycle-title" id="cycle-title">O ciclo que o AtendeHoje acompanha</p>
+          <ol class="lp-cycle-list">
+            <li><span class="lp-cycle-n">1</span><strong>Contato</strong><span>WhatsApp, Instagram ou link de agendamento</span></li>
+            <li><span class="lp-cycle-n">2</span><strong>Agendamento</strong><span>Horário, profissional e serviço registrados</span></li>
+            <li><span class="lp-cycle-n">3</span><strong>Atendimento</strong><span>Confirmado e concluído na agenda</span></li>
+            <li><span class="lp-cycle-n">4</span><strong>Caixa</strong><span>Valor registrado por forma de pagamento</span></li>
+            <li class="is-accent"><span class="lp-cycle-n">5</span><strong>Retorno</strong><span>O sistema sinaliza quando é hora de voltar</span></li>
+          </ol>
+          <p class="lp-cycle-loop"><span aria-hidden="true">↺</span> E o ciclo recomeça com um novo agendamento.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== JORNADA / COMO FUNCIONA ===== -->
-  <section class="section" id="como-funciona">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Do primeiro contato à próxima visita.</h2>
-        <p>Um ciclo simples, do jeito que ele já acontece no seu negócio — só que organizado.</p>
+  <!-- ===== 4. QUANDO ===== -->
+  <section class="lp-section" id="para-quem" aria-labelledby="quando-title">
+    <div class="lp-container">
+      <div class="lp-head reveal">
+        <p class="lp-kicker">Para quem é</p>
+        <h2 id="quando-title">Quando o AtendeHoje faz sentido</h2>
+        <p class="lp-section-lead">Se existe atendimento marcado e cliente que volta, o AtendeHoje pode fazer parte dessa operação.</p>
       </div>
 
-      <ol class="journey reveal">
-        <li class="journey-step"><span class="journey-num">01</span><h3>Cliente entra em contato</h3></li>
-        <li class="journey-step"><span class="journey-num">02</span><h3>Atendimento identifica necessidade</h3></li>
-        <li class="journey-step"><span class="journey-num">03</span><h3>Agendamento é registrado</h3></li>
-        <li class="journey-step"><span class="journey-num">04</span><h3>Profissional realiza atendimento</h3></li>
-        <li class="journey-step"><span class="journey-num">05</span><h3>Histórico permanece organizado</h3></li>
-        <li class="journey-step"><span class="journey-num">06</span><h3>Empresa acompanha capacidade e oportunidades</h3></li>
-        <li class="journey-step"><span class="journey-num">07</span><h3>Relacionamento continua</h3></li>
+      <div class="lp-fit-grid reveal">
+        <div class="lp-fit lp-fit-yes">
+          <h3>Faz sentido quando</h3>
+          <ul>
+            <li>sua operação atende com horário marcado;</li>
+            <li>seus clientes costumam voltar;</li>
+            <li>há mais de um atendimento acontecendo ao mesmo tempo na rotina;</li>
+            <li>você quer acompanhar retorno e relacionamento, não só a agenda;</li>
+            <li>agenda, clientes e caixa já começam a exigir controle.</li>
+          </ul>
+        </div>
+        <div class="lp-fit lp-fit-no">
+          <h3>Talvez ainda não seja o momento se</h3>
+          <ul>
+            <li>você procura apenas uma agenda gratuita e básica;</li>
+            <li>seus atendimentos raramente se repetem com o mesmo cliente;</li>
+            <li>ainda não existe uma rotina de atendimento com horário marcado.</li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="lp-chips reveal" aria-label="Segmentos atendidos">
+        <li>Salões de beleza</li>
+        <li>Clínicas de estética</li>
+        <li>Barbearias</li>
+        <li>Studios</li>
+        <li>Massagens e terapias</li>
+        <li>Espaços de bem-estar</li>
+        <li>Saúde e odontologia</li>
+        <li>Profissionais autônomos</li>
+        <li>Equipes com vários profissionais</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 5. O QUÊ ===== -->
+  <section class="lp-section lp-surface-white" id="recursos" aria-labelledby="recursos-title">
+    <div class="lp-container">
+      <div class="lp-head reveal">
+        <p class="lp-kicker">O que você recebe</p>
+        <h2 id="recursos-title">O que você encontra no AtendeHoje</h2>
+        <p class="lp-section-lead">Quatro frentes da mesma operação. Todas as telas abaixo são do sistema em uso, com os dados de clientes ocultados.</p>
+      </div>
+
+      <div class="lp-features">
+        <!-- Relacionamento (destaque) -->
+        <article class="lp-feature lp-feature-featured reveal" aria-labelledby="f-rel">
+          <div class="lp-feature-copy">
+            <p class="lp-feature-label"><span>01</span>Relacionamento <em class="lp-badge">Diferencial</em></p>
+            <h3 id="f-rel">Enxergue quem deveria voltar e quais clientes merecem atenção agora.</h3>
+            <ul class="lp-checks">
+              <li>Clientes em momento de retorno, pela frequência real de cada um</li>
+              <li>Clientes sem retorno por tempo: 30, 45, 90 dias ou mais</li>
+              <li>Aniversariantes e próximos atendimentos em um só lugar</li>
+              <li>Mensagens sugeridas, prontas para copiar e enviar</li>
+            </ul>
+            <p class="lp-note">As mensagens são enviadas pela sua equipe. O AtendeHoje não dispara mensagens automaticamente.</p>
+          </div>
+          <button type="button" class="lp-shot lp-feature-media" data-full="assets/landing/relacionamento.png" aria-label="Ampliar imagem do módulo de relacionamento">
+            <picture>
+              <source media="(max-width: 639px)" srcset="assets/landing/web/relacionamento-m.webp" width="694" height="236">
+              <img src="assets/landing/web/relacionamento-800.webp" srcset="assets/landing/web/relacionamento-800.webp 800w, assets/landing/web/relacionamento-1400.webp 1400w" sizes="(min-width: 1024px) 640px, 92vw" width="1400" height="1178" alt="Módulo de Relacionamento do AtendeHoje com próximos atendimentos, aniversariantes, clientes em momento de retorno e uma mensagem sugerida" loading="lazy" decoding="async">
+            </picture>
+          </button>
+        </article>
+
+        <!-- Agenda -->
+        <article class="lp-feature reveal" aria-labelledby="f-agenda">
+          <div class="lp-feature-copy">
+            <p class="lp-feature-label"><span>02</span>Agenda</p>
+            <h3 id="f-agenda">Veja quem vem, organize a equipe e mantenha o dia sob controle.</h3>
+            <ul class="lp-checks">
+              <li>Visão de dia, semana e mês, por profissional</li>
+              <li>Status e confirmação de cada atendimento</li>
+              <li>Bloqueio de horários e serviços configurados</li>
+              <li>Link de agendamento com QR Code para o cliente marcar sozinho</li>
+            </ul>
+          </div>
+          <button type="button" class="lp-shot lp-feature-media" data-full="assets/landing/dashboard.png" aria-label="Ampliar imagem dos próximos atendimentos do dia">
+            <img src="assets/landing/web/dia-m.webp" width="760" height="528" alt="Lista de próximos atendimentos do dia no AtendeHoje, com status como agendado, confirmado e concluído" loading="lazy" decoding="async">
+          </button>
+        </article>
+
+        <!-- Caixa -->
+        <article class="lp-feature reveal" aria-labelledby="f-caixa">
+          <div class="lp-feature-copy">
+            <p class="lp-feature-label"><span>03</span>Caixa</p>
+            <h3 id="f-caixa">Depois do atendimento, registre como aquele valor entrou na operação.</h3>
+            <ul class="lp-checks">
+              <li>Atendimentos concluídos seguem para o registro de caixa</li>
+              <li>Totais por forma de pagamento: Pix, crédito, débito e dinheiro</li>
+              <li>Fechamento por data e fluxo de caixa diário</li>
+            </ul>
+          </div>
+          <button type="button" class="lp-shot lp-feature-media" data-full="assets/landing/caixa.png" aria-label="Ampliar imagem do caixa">
+            <img src="assets/landing/web/caixa-m.webp" width="780" height="368" alt="Caixa do AtendeHoje com lotes por data e histórico de totais por forma de pagamento" loading="lazy" decoding="async">
+          </button>
+        </article>
+
+        <!-- Gestão -->
+        <article class="lp-feature reveal" aria-labelledby="f-gestao">
+          <div class="lp-feature-copy">
+            <p class="lp-feature-label"><span>04</span>Gestão</p>
+            <h3 id="f-gestao">Agenda, clientes e rotina deixam de viver em lugares separados.</h3>
+            <ul class="lp-checks">
+              <li>Copiloto: capacidade comercial, ocupação e faturamento agendado do dia</li>
+              <li>Janelas livres na agenda que ainda podem virar atendimento</li>
+              <li>Cadastro de serviços, profissionais e produtos com estoque</li>
+            </ul>
+          </div>
+          <button type="button" class="lp-shot lp-feature-media" data-full="assets/landing/copiloto.png" aria-label="Ampliar imagem do Copiloto">
+            <img src="assets/landing/web/copiloto-m.webp" width="536" height="340" alt="Copiloto do AtendeHoje com capacidade comercial disponível, ocupação, faturamento agendado e oportunidades abertas no dia" loading="lazy" decoding="async">
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. CONFIANÇA + CTA INTERMEDIÁRIO ===== -->
+  <section class="lp-section lp-surface-dark" id="comecar" aria-labelledby="comecar-title">
+    <div class="lp-container lp-start-grid">
+      <div class="lp-start-copy reveal">
+        <p class="lp-kicker lp-kicker-dark">Como começar</p>
+        <h2 id="comecar-title">Você não começa sozinho.</h2>
+        <p class="lp-section-lead">A implantação é acompanhada. Antes de a sua equipe usar no dia a dia, a operação já está configurada do jeito que ela funciona.</p>
+        <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20AtendeHoje%20e%20organizar%20a%20opera%C3%A7%C3%A3o%20do%20meu%20neg%C3%B3cio." class="lp-btn lp-btn-accent lp-btn-lg" target="_blank" rel="noopener" data-cta="mid">Quero ver isso na minha operação</a>
+      </div>
+      <ol class="lp-start-steps reveal">
+        <li><span>1</span><div><h3>Conversa pelo WhatsApp</h3><p>Entendemos como sua operação funciona hoje.</p></div></li>
+        <li><span>2</span><div><h3>Configuração com você</h3><p>Serviços, profissionais e agenda prontos antes de começar.</p></div></li>
+        <li><span>3</span><div><h3>Uso no navegador</h3><p>No computador ou no celular, sem instalar nada.</p></div></li>
       </ol>
     </div>
   </section>
 
-  <!-- ===== PARA QUEM ===== -->
-  <section class="section section-alt" id="para-quem">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Para negócios onde atendimento e agenda precisam funcionar juntos.</h2>
-        <p>Ideal para quem recebe clientes por indicação, redes sociais ou WhatsApp e precisa transformar interesse em agendamento.</p>
+  <!-- ===== 7. PLANOS ===== -->
+  <section class="lp-section" id="planos" aria-labelledby="planos-title">
+    <div class="lp-container">
+      <div class="lp-head lp-head-center reveal">
+        <p class="lp-kicker">Planos</p>
+        <h2 id="planos-title">Escolha o plano para a sua rotina de atendimentos</h2>
+        <p class="lp-section-lead">Preço mensal, sem complicação. O que muda entre os planos é o tamanho da operação.</p>
       </div>
 
-      <div class="chip-row reveal">
-        <span class="chip">Clínicas de estética</span>
-        <span class="chip">Salões de beleza</span>
-        <span class="chip">Massagens e terapias</span>
-        <span class="chip">Saúde</span>
-        <span class="chip">Odontologia</span>
-        <span class="chip">Barbearias</span>
-        <span class="chip">Profissionais autônomos</span>
-        <span class="chip">Espaços com múltiplos profissionais</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== REDES ===== -->
-  <section class="section redes-band" id="redes">
-    <div class="wrap redes-grid reveal">
-      <div>
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Para redes</p>
-        <h2>Uma operação maior precisa de mais controle, não de mais planilhas.</h2>
-        <p class="split-lead">O AtendeHoje tem arquitetura preparada para atender organizações com múltiplas unidades, com padronização de cadastros, equipes e organização por unidade.</p>
-      </div>
-      <div class="redes-cta">
-        <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20falar%20sobre%20minha%20opera%C3%A7%C3%A3o%20com%20o%20AtendeHoje." class="btn btn-primary btn-lg" target="_blank" rel="noopener">Falar sobre minha operação</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== POSICIONAMENTO ===== -->
-  <section class="section section-dark position-band" id="posicionamento">
-    <div class="wrap reveal">
-      <h2>Não queremos ser apenas mais uma agenda.</h2>
-      <p class="position-lead">Queremos ser o parceiro operacional que ajuda seu negócio a transformar atendimento em organização, relacionamento e oportunidade.</p>
-      <p class="position-sub">Porque uma agenda organizada é só o começo.</p>
-    </div>
-  </section>
-
-  <!-- ===== PLANOS ===== -->
-  <section class="section" id="planos">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Escolha o plano ideal para sua rotina de atendimentos</h2>
-        <p>Planos simples para organizar agendamentos, clientes e horários sem complicar a operação.</p>
-      </div>
-
-      <div class="pricing-grid reveal">
-        <article class="price-card">
-          <h3>Profissional Individual</h3>
-          <p class="price-sub">Para quem atende sozinho e quer profissionalizar o agendamento.</p>
-          <p class="price-value">R$ 97<span>/mês</span></p>
-          <ul class="price-list">
+      <div class="lp-pricing reveal">
+        <article class="lp-plan" aria-labelledby="p-ind">
+          <h3 id="p-ind">Profissional Individual</h3>
+          <p class="lp-plan-for">Para quem atende sozinho e quer profissionalizar o agendamento.</p>
+          <p class="lp-plan-price"><span class="lp-plan-cur">R$</span>97<span class="lp-plan-per">/mês</span></p>
+          <p class="lp-plan-limit">Atendimento individual</p>
+          <ul class="lp-plan-list">
             <li>Agenda online com link direto</li>
             <li>Cadastro de clientes</li>
             <li>Serviços e horários configurados</li>
-            <li>Painel de administração</li>
             <li>Bloqueio e organização de horários</li>
+            <li>Painel de administração</li>
           </ul>
-          <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Atendo%20sozinho(a)%20e%20quero%20come%C3%A7ar%20agora%20com%20o%20plano%20Profissional%20Individual%20do%20AtendeHoje." class="btn btn-outline btn-block" target="_blank" rel="noopener">Começar agora</a>
+          <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Atendo%20sozinho(a)%20e%20quero%20come%C3%A7ar%20agora%20com%20o%20plano%20Profissional%20Individual%20do%20AtendeHoje." class="lp-btn lp-btn-outline lp-btn-block" target="_blank" rel="noopener" data-cta="plan-individual">Quero o plano Individual</a>
         </article>
 
-        <article class="price-card price-card-featured">
-          <span class="price-badge">Mais escolhido</span>
-          <h3>Clínica / Empresa</h3>
-          <p class="price-sub">Para clínicas, salões e negócios com equipe.</p>
-          <p class="price-value">R$ 397<span>/mês</span></p>
-          <div class="price-users-badge">
-            <span class="price-note">Até 8 usuários incluídos</span>
-            <span class="price-note price-note-faint">+ R$38 por faixa adicional de usuários</span>
-          </div>
-          <ul class="price-list">
-            <li>Agenda para toda a equipe</li>
+        <article class="lp-plan lp-plan-featured" aria-labelledby="p-emp">
+          <p class="lp-plan-badge">Mais escolhido</p>
+          <h3 id="p-emp">Clínica / Empresa</h3>
+          <p class="lp-plan-for">Para clínicas, salões e negócios com equipe.</p>
+          <p class="lp-plan-price"><span class="lp-plan-cur">R$</span>397<span class="lp-plan-per">/mês</span></p>
+          <p class="lp-plan-limit">Até 8 usuários incluídos <span>+ R$38 por faixa adicional de usuários</span></p>
+          <ul class="lp-plan-list">
+            <li>Agenda para toda a equipe, com visão por profissional</li>
             <li>Cadastro de clientes e profissionais</li>
             <li>Serviços e horários configurados</li>
             <li>Link público personalizado</li>
             <li>Copiloto e módulo de relacionamento</li>
             <li>Painel de administração</li>
-            <li>Visualização de agenda por profissional</li>
           </ul>
-          <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Tenho%20uma%20cl%C3%ADnica%2Fneg%C3%B3cio%20com%20equipe%20e%20quero%20organizar%20minha%20agenda%20com%20o%20plano%20Cl%C3%ADnica%2FEmpresa%20do%20AtendeHoje." class="btn btn-primary btn-block" target="_blank" rel="noopener">Quero organizar minha agenda</a>
+          <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Tenho%20uma%20cl%C3%ADnica%2Fneg%C3%B3cio%20com%20equipe%20e%20quero%20organizar%20minha%20agenda%20com%20o%20plano%20Cl%C3%ADnica%2FEmpresa%20do%20AtendeHoje." class="lp-btn lp-btn-primary lp-btn-block" target="_blank" rel="noopener" data-cta="plan-empresa">Quero o plano Clínica / Empresa</a>
         </article>
 
-        <article class="price-card price-card-dark">
-          <h3>Redes</h3>
-          <p class="price-sub">Para organizações com mais de uma unidade e equipes maiores.</p>
-          <p class="price-value price-value-custom">Plano personalizado por operação</p>
-          <ul class="price-list">
+        <article class="lp-plan lp-plan-dark" aria-labelledby="p-redes">
+          <h3 id="p-redes">Redes</h3>
+          <p class="lp-plan-for">Para organizações com mais de uma unidade e equipes maiores.</p>
+          <p class="lp-plan-price lp-plan-price-custom">Plano personalizado por operação</p>
+          <p class="lp-plan-limit">Múltiplas unidades</p>
+          <ul class="lp-plan-list">
             <li>Arquitetura preparada para múltiplas unidades</li>
             <li>Padronização de cadastros e equipes</li>
             <li>Organização por unidade</li>
             <li>Acompanhamento próximo na implantação</li>
           </ul>
-          <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20conhecer%20o%20plano%20personalizado%20do%20AtendeHoje." class="btn btn-accent btn-block" target="_blank" rel="noopener">Falar com o AtendeHoje</a>
+          <a href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20conhecer%20o%20plano%20personalizado%20do%20AtendeHoje." class="lp-btn lp-btn-accent lp-btn-block" target="_blank" rel="noopener" data-cta="plan-redes">Falar sobre minha rede</a>
         </article>
       </div>
+    </div>
+  </section>
 
-      <div class="partners-banner reveal">
-        <div class="partners-badge">AtendeHoje Parceiros</div>
-        <h3>Cresça com o AtendeHoje</h3>
-        <p>Você tem contato, influência ou relacionamento com profissionais de estética, saúde e beleza?</p>
-        <p>O AtendeHoje Parceiros foi criado para quem acredita que sua audiência ou rede de contatos pode se beneficiar de uma operação mais organizada, uma agenda mais ocupada e mais clientes retornando.</p>
-        <ul class="partners-list">
-          <li>Parceria comercial com o AtendeHoje</li>
-          <li>Benefícios exclusivos para sua audiência</li>
-          <li>Remuneração por clientes indicados</li>
-          <li>Materiais e suporte para divulgação</li>
-          <li>O AtendeHoje cuida da apresentação, implantação e suporte</li>
-        </ul>
-        <p class="partners-closing">Você gera a conexão. Nós cuidamos do restante.</p>
-        <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Conheci%20o%20AtendeHoje%20Parceiros%20pelo%20site%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20parceria." class="btn btn-accent" target="_blank" rel="noopener">Quero ser parceiro</a>
+  <!-- ===== 8. FAQ ===== -->
+  <section class="lp-section lp-surface-soft" id="faq" aria-labelledby="faq-title">
+    <div class="lp-container lp-faq-grid">
+      <div class="lp-head reveal">
+        <p class="lp-kicker">Dúvidas</p>
+        <h2 id="faq-title">Perguntas frequentes</h2>
+        <p class="lp-section-lead">Não encontrou o que procura? <a class="lp-link" href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Estou%20vendo%20o%20site%20da%20AtendeHoje%20e%20tenho%20uma%20d%C3%BAvida%20r%C3%A1pida." target="_blank" rel="noopener">Pergunte pelo WhatsApp</a>.</p>
+      </div>
+
+      <div class="lp-faq reveal">
+        <details open>
+          <summary>O AtendeHoje é apenas uma agenda?</summary>
+          <p>Não. A agenda é uma parte da plataforma. O objetivo é conectar atendimento, clientes, equipe, relacionamento e caixa em uma única estrutura.</p>
+        </details>
+        <details>
+          <summary>Preciso instalar alguma coisa? Funciona no celular?</summary>
+          <p>Não precisa instalar nada. O AtendeHoje funciona pelo navegador, no computador ou no celular.</p>
+        </details>
+        <details>
+          <summary>Consigo usar com a minha equipe?</summary>
+          <p>Sim. Você cadastra profissionais, serviços e horários. Usuário é cada pessoa que precisa de acesso próprio ao painel. O plano Clínica / Empresa inclui até 8 usuários; acima disso, o custo é cobrado por faixa — a faixa de 9 a 15 usuários, por exemplo, custa +R$38/mês.</p>
+        </details>
+        <details>
+          <summary>Meus clientes podem agendar sozinhos?</summary>
+          <p>Sim. Você compartilha o seu link público de agendamento (ou o QR Code) e o cliente escolhe serviço, profissional e horário disponível, sem depender da sua equipe para cada marcação.</p>
+        </details>
+        <details>
+          <summary>Preciso abandonar o WhatsApp?</summary>
+          <p>Não. O WhatsApp continua sendo um canal importante de atendimento. O AtendeHoje organiza aquilo que não deveria depender só da conversa: a agenda, o histórico do cliente e o momento certo de retomar contato. As mensagens sugeridas são enviadas pela sua equipe.</p>
+        </details>
+        <details>
+          <summary>Como funciona a implantação?</summary>
+          <p>Você fala com a gente pelo WhatsApp. Entendemos sua operação e ajudamos a configurar serviços, profissionais e agenda antes de começar a usar.</p>
+        </details>
+        <details>
+          <summary>Serve para o meu tipo de negócio?</summary>
+          <p>Se você atende com horário marcado e seus clientes costumam voltar — salões, clínicas de estética, barbearias, studios, terapias, saúde —, o AtendeHoje foi pensado para essa rotina. Na dúvida, conte como funciona sua operação e dizemos com sinceridade se faz sentido.</p>
+        </details>
+        <details>
+          <summary>Funciona para mais de uma unidade?</summary>
+          <p>O AtendeHoje tem arquitetura preparada para organizações com múltiplas unidades. <a class="lp-link" href="https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20falar%20sobre%20minha%20opera%C3%A7%C3%A3o%20com%20o%20AtendeHoje." target="_blank" rel="noopener">Fale com a gente</a> para entender o melhor formato para a sua rede.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <!-- ===== FAQ ===== -->
-  <section class="section section-alt" id="faq">
-    <div class="wrap wrap-narrow">
-      <div class="section-head reveal">
-        <h2>Dúvidas frequentes</h2>
-      </div>
-
-      <div class="accordion reveal" id="accordion">
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="true">
-            <span>O AtendeHoje é apenas uma agenda?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Não. A agenda é uma parte da plataforma. O objetivo é conectar atendimento, clientes, equipe e informações operacionais em uma única estrutura.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Preciso abandonar o WhatsApp?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Não. O WhatsApp continua sendo um canal importante de atendimento. O AtendeHoje organiza aquilo que não deveria depender apenas da conversa, como a agenda, o histórico do cliente e os lembretes de acompanhamento.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Meus clientes podem agendar sozinhos?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Sim. Você compartilha o seu link público de agendamento e o cliente escolhe serviço, profissional e horário disponível sem depender da sua equipe para cada marcação.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Consigo cadastrar minha equipe?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Sim. Você cadastra profissionais, serviços e horários. Um usuário adicional só é necessário quando essa pessoa também precisa de acesso próprio ao painel do AtendeHoje.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Funciona para mais de uma unidade?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>O AtendeHoje tem arquitetura preparada para organizações com múltiplas unidades. Fale com a gente para entender o melhor formato para a sua rede.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Preciso instalar alguma coisa?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Não. O AtendeHoje funciona pelo navegador, no computador ou no celular, sem instalação.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>O que conta como usuário no plano Clínica / Empresa?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Usuário é cada pessoa que possui um acesso próprio ao painel do AtendeHoje. O plano Clínica / Empresa inclui até 8 usuários. Se sua equipe passar disso, o custo adicional é cobrado por faixa de usuários: a faixa de 9 a 15 usuários, por exemplo, custa +R$38/mês.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Como funciona o AtendeHoje Parceiros?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>É um programa de parceria para pessoas e empresas com relacionamento, audiência ou influência sobre profissionais de estética, saúde e beleza. Ao indicar o AtendeHoje para a sua rede, você conta com remuneração por clientes indicados e suporte para divulgação. Os detalhes da parceria são apresentados em conversa direta com o time do AtendeHoje.</p>
-          </div>
-        </div>
-        <div class="acc-item">
-          <button class="acc-trigger" aria-expanded="false">
-            <span>Como começo?</span>
-            <svg viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="acc-panel">
-            <p>Fale com a gente pelo WhatsApp. Entendemos sua operação e te ajudamos a configurar serviços, profissionais e agenda antes de começar a usar.</p>
-          </div>
-        </div>
+  <!-- ===== 9. CTA FINAL ===== -->
+  <section class="lp-cta" id="contato" aria-labelledby="cta-title">
+    <div class="lp-container lp-cta-inner reveal">
+      <h2 id="cta-title">Sua operação pode trabalhar melhor sem depender da memória de todo mundo.</h2>
+      <p>Conheça o AtendeHoje e veja como agenda, clientes, retorno e caixa podem funcionar como uma rotina só.</p>
+      <div class="lp-cta-buttons">
+        <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Quero%20conhecer%20o%20AtendeHoje%20e%20entender%20como%20estruturar%20meu%20atendimento%20e%20agenda." class="lp-btn lp-btn-accent lp-btn-lg" target="_blank" rel="noopener" data-cta="final-primary">Quero conhecer o AtendeHoje</a>
+        <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Vi%20os%20planos%20da%20AtendeHoje%20e%20quero%20come%C3%A7ar%20a%20organizar%20minha%20agenda." class="lp-btn lp-btn-outline-light lp-btn-lg" target="_blank" rel="noopener" data-cta="final-secondary">Falar com a equipe</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA FINAL ===== -->
-  <section class="section cta-final" id="contato">
-    <div class="wrap cta-final-inner reveal">
-      <p class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span>AtendeHoje</p>
-      <h2>Sua operação pode trabalhar melhor ao redor de cada atendimento.</h2>
-      <p>Conheça o AtendeHoje e veja como podemos organizar sua rotina, seus clientes e as oportunidades que hoje podem estar passando despercebidas.</p>
-      <div class="hero-cta cta-final-buttons">
-        <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Quero%20conhecer%20o%20AtendeHoje%20e%20entender%20como%20estruturar%20meu%20atendimento%20e%20agenda." class="btn btn-primary btn-lg" target="_blank" rel="noopener">Conhecer o AtendeHoje</a>
-        <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Vi%20os%20planos%20da%20AtendeHoje%20e%20quero%20come%C3%A7ar%20a%20organizar%20minha%20agenda." class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar com a equipe</a>
+  <!-- ===== PARCEIROS (público secundário) ===== -->
+  <section class="lp-partners" id="parceiros" aria-labelledby="parceiros-title">
+    <div class="lp-container lp-partners-inner">
+      <div>
+        <p class="lp-kicker">AtendeHoje Parceiros</p>
+        <h2 id="parceiros-title">Tem relacionamento com profissionais de estética, saúde e beleza?</h2>
+        <p>Indique o AtendeHoje para a sua rede com benefícios exclusivos para a sua audiência, remuneração por clientes indicados e materiais de divulgação. Você gera a conexão; nós cuidamos da apresentação, implantação e suporte.</p>
       </div>
+      <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Conheci%20o%20AtendeHoje%20Parceiros%20pelo%20site%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20parceria." class="lp-btn lp-btn-outline" target="_blank" rel="noopener" data-cta="partners">Quero ser parceiro</a>
     </div>
   </section>
 
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-brand">
-      <a href="#top" class="logo logo-footer">
-        <span class="logo-mark" aria-hidden="true">
-          <img src="assets/logo-atende-hoje.png" alt="" width="32" height="32">
-        </span>
-        <span class="logo-text">Atende<strong>Hoje</strong></span>
+<footer class="lp-footer">
+  <div class="lp-container lp-footer-grid">
+    <div class="lp-footer-brand">
+      <a href="#top" class="lp-logo lp-logo-light" aria-label="AtendeHoje — voltar ao topo">
+        <img src="assets/logo-atende-hoje.png" alt="" width="32" height="32" loading="lazy">
+        <span>Atende<strong>Hoje</strong></span>
       </a>
-      <p>Parceiro operacional para negócios que vivem de atendimento agendado. Agenda, clientes, equipe e oportunidades em um só lugar.</p>
+      <p>Agenda, clientes, relacionamento e caixa para negócios que vivem de atendimento com horário marcado.</p>
     </div>
 
-    <nav class="footer-col">
-      <h4>Produto</h4>
-      <a href="#agenda">Agenda</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#agendamento-online">Agendamento online</a>
-      <a href="#copiloto">Copiloto</a>
+    <nav class="lp-footer-col" aria-label="Produto">
+      <h2>Produto</h2>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#planos">Planos</a>
     </nav>
 
-    <nav class="footer-col">
-      <h4>Empresa</h4>
-      <a href="#posicionamento">Sobre o AtendeHoje</a>
+    <nav class="lp-footer-col" aria-label="Empresa">
+      <h2>Empresa</h2>
       <a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20no%20site%20da%20AtendeHoje%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">Contato</a>
       <a href="https://www.instagram.com/atende.hoje?igsh=ZXFyYnczNXplNWho" target="_blank" rel="noopener">Instagram</a>
+      <a href="#parceiros">Seja parceiro</a>
+      <a href="https://app.atendehoje.com.br" target="_blank" rel="noopener">Entrar</a>
     </nav>
   </div>
-  <div class="wrap footer-bottom">
-    <p>&copy; <span id="year"></span> AtendeHoje. Todos os direitos reservados.</p>
+  <div class="lp-container lp-footer-bottom">
+    <p>&copy; <span id="year">2026</span> AtendeHoje. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Estou%20vendo%20o%20site%20da%20AtendeHoje%20e%20tenho%20uma%20d%C3%BAvida%20r%C3%A1pida." class="whatsapp-fab" aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener">
-  <svg viewBox="0 0 32 32" fill="none"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6A11.9 11.9 0 0 0 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="currentColor"/><path d="M11.6 10.6c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6.3.7.9 2.3.9 2.5.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.4.4-.2.7.3.4 1.1 1.7 2.4 2.8 1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.3.5-.3.8-.2.3.1 2.1 1 2.4 1.2.3.1.5.2.6.3.1.2.1 1-.3 1.9-.4.9-2 1.7-2.8 1.8-.7.1-1.6.2-5.2-1.1-4.4-1.7-7.2-6.2-7.4-6.5-.2-.3-1.8-2.4-1.8-4.5 0-2.2 1.1-3.2 1.5-3.7Z" fill="var(--evergreen)"/></svg>
+<a href="https://wa.me/5534991054225?text=Ol%C3%A1!%20Estou%20vendo%20o%20site%20da%20AtendeHoje%20e%20tenho%20uma%20d%C3%BAvida%20r%C3%A1pida." class="lp-whatsapp" aria-label="Falar pelo WhatsApp" target="_blank" rel="noopener" data-cta="whatsapp-fab">
+  <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 4C9.4 4 4 9.4 4 16c0 2.2.6 4.3 1.7 6.1L4 28l6.1-1.6A11.9 11.9 0 0 0 16 28c6.6 0 12-5.4 12-12S22.6 4 16 4Z" fill="currentColor"/><path d="M11.6 10.6c.3-.6.6-.6.9-.6h.7c.2 0 .5 0 .7.6.3.7.9 2.3.9 2.5.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.4.4-.2.7.3.4 1.1 1.7 2.4 2.8 1.6 1.4 2.9 1.9 3.3 2.1.4.2.6.2.8-.1.2-.3.9-1 1.1-1.4.2-.3.5-.3.8-.2.3.1 2.1 1 2.4 1.2.3.1.5.2.6.3.1.2.1 1-.3 1.9-.4.9-2 1.7-2.8 1.8-.7.1-1.6.2-5.2-1.1-4.4-1.7-7.2-6.2-7.4-6.5-.2-.3-1.8-2.4-1.8-4.5 0-2.2 1.1-3.2 1.5-3.7Z" fill="#042A2B"/></svg>
 </a>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem ampliada">&times;</button>
-  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+<div class="lp-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
+  <button type="button" class="lp-lightbox-close" id="lightboxClose" aria-label="Fechar imagem ampliada">&times;</button>
+  <img class="lp-lightbox-img" id="lightboxImg" src="data:," alt="">
 </div>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>

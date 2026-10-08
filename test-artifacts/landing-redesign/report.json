@@ -1,0 +1,154 @@
+{
+  "report": {
+    "320": {
+      "scrollW": 320,
+      "clientW": 320,
+      "height": 14545,
+      "h1count": 1,
+      "h1lines": 5,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 5820.34375,
+      "broken": [],
+      "errors": []
+    },
+    "360": {
+      "scrollW": 360,
+      "clientW": 360,
+      "height": 13979,
+      "h1count": 1,
+      "h1lines": 5,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 5665.75,
+      "broken": [],
+      "errors": []
+    },
+    "390": {
+      "scrollW": 390,
+      "clientW": 390,
+      "height": 13484,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 5398.84375,
+      "broken": [],
+      "errors": []
+    },
+    "430": {
+      "scrollW": 430,
+      "clientW": 430,
+      "height": 12932,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 5093.953125,
+      "broken": [],
+      "errors": []
+    },
+    "768": {
+      "scrollW": 768,
+      "clientW": 768,
+      "height": 10726,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 4299.65625,
+      "broken": [],
+      "errors": []
+    },
+    "1024": {
+      "scrollW": 1024,
+      "clientW": 1024,
+      "height": 8518,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 3356.9375,
+      "broken": [],
+      "errors": []
+    },
+    "1366": {
+      "scrollW": 1366,
+      "clientW": 1366,
+      "height": 8370,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 3306.5625,
+      "broken": [],
+      "errors": []
+    },
+    "1440": {
+      "scrollW": 1440,
+      "clientW": 1440,
+      "height": 8376,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 3312.15625,
+      "broken": [],
+      "errors": []
+    },
+    "1920": {
+      "scrollW": 1920,
+      "clientW": 1920,
+      "height": 8376,
+      "h1count": 1,
+      "h1lines": 4,
+      "overflowing": [],
+      "smallTargets": [],
+      "recursosTop": 3312.15625,
+      "broken": [],
+      "errors": []
+    }
+  },
+  "cmp": {
+    "390": {
+      "old": 19937,
+      "new": 13484,
+      "reducao": "32%",
+      "oldSections": 17
+    },
+    "768": {
+      "old": 19115,
+      "new": 10726,
+      "reducao": "44%",
+      "oldSections": 17
+    },
+    "1366": {
+      "old": 12763,
+      "new": 8370,
+      "reducao": "34%",
+      "oldSections": 17
+    },
+    "1920": {
+      "old": 12763,
+      "new": 8376,
+      "reducao": "34%",
+      "oldSections": 17
+    }
+  },
+  "links": [
+    "https://app.atendehoje.com.br",
+    "https://wa.me/5534991054225?text=Ol%C3%A1%21%20Vim%20pelo%20site%20do%20AtendeHoje%20e%20quero%20conhecer%20a%20plataforma.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1%21%20Quero%20conhecer%20o%20AtendeHoje%20e%20organizar%20a%20opera%C3%A7%C3%A3o%20do%20meu%20neg%C3%B3cio.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Atendo%20sozinho(a)%20e%20quero%20come%C3%A7ar%20agora%20com%20o%20plano%20Profissional%20Individual%20do%20AtendeHoje.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Tenho%20uma%20cl%C3%ADnica%2Fneg%C3%B3cio%20com%20equipe%20e%20quero%20organizar%20minha%20agenda%20com%20o%20plano%20Cl%C3%ADnica%2FEmpresa%20do%20AtendeHoje.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20conhecer%20o%20plano%20personalizado%20do%20AtendeHoje.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Estou%20vendo%20o%20site%20da%20AtendeHoje%20e%20tenho%20uma%20d%C3%BAvida%20r%C3%A1pida.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1%21%20Tenho%20uma%20rede%20com%20mais%20de%20uma%20unidade%20e%20quero%20falar%20sobre%20minha%20opera%C3%A7%C3%A3o%20com%20o%20AtendeHoje.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Quero%20conhecer%20o%20AtendeHoje%20e%20entender%20como%20estruturar%20meu%20atendimento%20e%20agenda.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Vi%20os%20planos%20da%20AtendeHoje%20e%20quero%20come%C3%A7ar%20a%20organizar%20minha%20agenda.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Conheci%20o%20AtendeHoje%20Parceiros%20pelo%20site%20e%20gostaria%20de%20entender%20melhor%20como%20funciona%20a%20parceria.",
+    "https://wa.me/5534991054225?text=Ol%C3%A1!%20Encontrei%20o%20contato%20de%20voc%C3%AAs%20no%20site%20da%20AtendeHoje%20e%20gostaria%20de%20conversar.",
+    "https://www.instagram.com/atende.hoje?igsh=ZXFyYnczNXplNWho"
+  ],
+  "fails": []
+}
